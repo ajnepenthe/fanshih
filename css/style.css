@@ -1,0 +1,754 @@
+@charset "UTF-8";
+
+::selection {
+    background: #eee; /* Safari */
+}
+::-moz-selection {
+    background: #eee; /* Firefox */
+}
+
+html {
+	font-size: 62.5%;
+}
+body {
+	text-align: center; /* ie8置中 */
+	width: 100%;
+	cursor: default;
+}
+div, a, span, p, h1, h2, input, textarea, tr, table, li {
+	-webkit-transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out, -webkit-box-shadow 0.4s ease-in-out;
+	transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+	-moz-transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out, -moz-box-shadow 0.4s ease-in-out;
+}
+div:hover, a:hover, span:hover, p:hover, h1:hover, h2:hover, input:hover, textarea:hover, tr:hover, table:hover, li:hover {
+	-webkit-transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, -webkit-box-shadow 0.2s ease;
+    transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease,  box-shadow 0.2s ease;
+	-moz-transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, -moz-box-shadow 0.2s ease;
+}
+.content {
+	width: 950px;
+	margin: 0 auto; /* firefox */
+    *margin: 0 auto; /* ie7 */
+	_margin: 0 auto;
+	text-align: left;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+.content:after {
+	content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+.border {
+	height: 10px;
+	width: 100%;
+}
+.top {
+	text-align: center;
+	margin-bottom: 50px;
+}
+.top a {
+	background: url(../images/top.png) no-repeat;
+	width: 74px;
+	height: 74px;
+	display: inline-block;
+	margin: 0 auto;
+}
+/*---index---*/
+header {
+	position: relative;
+	min-width: 1000px;
+	background: url(../images/header-bg.jpg) repeat 50% 0;
+}
+header nav {
+	padding: 35px 25px;
+}
+header nav:after {
+	content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+header nav a {
+	font-family: StMarieWebThin, "Helvetica Neue", Helvetica, "Heiti TC", "微軟正黑體", "Microsoft Sans Serif";
+	float: left;
+	display: block;
+	text-decoration: none;
+	color: #000;
+	width: 150px;
+	font-size: 2.1rem;
+	line-height: 100px;
+	margin-top: 50px;
+	text-align: center;
+}
+header nav a:hover {
+	color: #777;
+}
+header nav img {
+	float: left;
+	width: 200px;
+	height: 200px;
+	margin: 0 50px;
+}
+header ul {
+	position: absolute;
+	right: 20px;
+	top: 20px;
+}
+header li {
+	float: left;
+	display: block;
+	margin-right: 3px;
+}
+header li a {
+	font-family: MyriadPro, "Helvetica Neue", Helvetica, "Heiti TC", "微軟正黑體", "Microsoft Sans Serif";
+	display: block;
+	color: #9c9ea7;
+	font-size: 1.2rem;
+	width: 24px;
+	height: 24px;
+	line-height: 24px;
+	text-decoration: none;
+	text-align: center;
+	font-weight: bold;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	background: #ddd;
+	color: #666;
+}
+header li a:hover {
+	color: #ddd;
+	background: #000;
+}
+header li a.selected {
+	background: none;
+}
+header li a.selected:hover {
+	color: #777;
+	cursor: default;
+}
+
+
+header li a {
+	font-family: MyriadPro, "Helvetica Neue", Helvetica, "Heiti TC", "微軟正黑體", "Microsoft Sans Serif";
+	display: block;
+	color: #9c9ea7;
+	font-size: 1.2rem;
+	width: 24px;
+	height: 24px;
+	line-height: 24px;
+	text-decoration: none;
+	text-align: center;
+	font-weight: bold;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	background: none;
+	color: #777;
+	border: 1px dashed #bbb;
+}
+header li a:hover {
+	color: #ddd;
+	background: #000;
+	border: 1px solid #000;
+}
+header li a.selected {
+	color: #666;
+	background: #ddd;
+	border: 1px solid #ddd;
+}
+header li a.selected:hover {
+	cursor: default;
+}
+
+
+header .border.bottom {
+	background: url(../images/border-white-bottom.png) 50% 0;
+}
+p#salutatory {
+	font-family: Georgia, "Helvetica Neue", Helvetica, "Heiti TC", "微軟正黑體", "Microsoft Sans Serif";
+	font-style: italic;
+	font-size: 2.1rem;
+	color: #999;
+	padding: 30px 60px;
+	text-align: center;
+	line-height: 167%;
+}
+#specialty {
+	margin-top: 30px;
+	padding-bottom: 100px;
+}
+#specialty:after {
+	content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+.skill {
+	float: left;
+	width: 316px;
+	padding-bottom: 30px;
+}
+.skill.mid {
+	border-left: 1px dashed #aaa;
+	border-right: 1px dashed #aaa;
+}
+.skill img {
+	width: 150px;
+	height: 150px;
+	padding: 30px 83px 0;
+}
+.skill p {
+	font-family: Absolut, "Helvetica Neue", Helvetica, "Heiti TC", "微軟正黑體", "Microsoft Sans Serif";
+	text-align: center;
+	margin-top: 40px;
+	font-size: 3rem;
+	line-height: 100%;
+	color: #000;
+}
+/*---index end---*/
+
+article h1 {
+	font-family: StMarieWebThin, "Helvetica Neue", Helvetica, "Heiti TC", "微軟正黑體", "Microsoft Sans Serif";
+	font-size: 6rem;
+	line-height: 200%;
+	text-align: center;
+	border-bottom: 5px solid;
+	letter-spacing: 2px;
+}
+article section {
+	margin-top: 50px;
+}
+
+/*---about---*/
+article#about {
+	min-width: 1000px;
+	background: url(../images/about-bg.jpg) repeat 50% 0;
+}
+article#about .border.top {
+	background: url(../images/border-white-top.png) 50% 0;
+}
+article#about .content {
+	padding-top: 10px;
+	padding-bottom: 100px;
+}
+article#about h1 {
+	border-color: #ddd;
+	color: #000;
+}
+article#about section:after {
+	content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+article#about .row {
+	float: left;
+	width: 300px;
+	margin-right: 25px;
+}
+article#about .row.last-child {
+	margin-right: 0;
+}
+img#personal {
+	width: 300px;
+}
+a#cv {
+	display: block;
+	font-family: Absolut, "Helvetica Neue", Helvetica, "Heiti TC", "微軟正黑體", "Microsoft Sans Serif";
+	font-size: 2.1rem;
+	line-height: 200%;
+	text-align: center;
+	text-decoration: none;
+	color: #ccc;
+	padding-top: 5px;
+	background: #666;
+	margin-top: 24px;
+	letter-spacing: 1px;
+}
+a#cv:hover {
+	color: #fff;
+	background: #000;
+}
+article#about .row .element {
+	margin-bottom:25px;
+}
+article#about .row .element h2 {
+	background: #dcdcdc;
+	color: #fff;
+	font-family: AbsolutItalic, "Helvetica Neue", Helvetica, "Heiti TC", "微軟正黑體", "Microsoft Sans Serif";
+	font-size: 2.1rem;
+	line-height: 200%;
+	padding-top: 5px;
+	padding-left: 10px;
+}
+div#mark {
+	font-family: Georgia, "Helvetica Neue", Helvetica, "Heiti TC", "微軟正黑體", "Microsoft Sans Serif";
+	font-style: italic;
+	font-size: 1.4rem;
+	line-height: 143%;
+	background: #7f7f7f;
+	color: #fff;
+	text-align: justify;
+	text-justify:inter-ideograph;
+	padding: 10px;
+}
+article#about .row .element p {
+	font-family: MyriadPro, "Helvetica Neue", Helvetica, "Heiti TC", "微軟正黑體", "Microsoft Sans Serif";
+	font-size: 1.4rem;
+	line-height: 143%;
+	padding-top: 5px;
+	text-align: justify;
+	text-justify:inter-ideograph;
+	color: #666;
+}
+article#about .row .element hgroup {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+article#about .row .element hgroup h3 {
+	font-family: StMarieWebThin, "Helvetica Neue", Helvetica, "Heiti TC", "微軟正黑體", "Microsoft Sans Serif";
+	font-size: 1.6rem;
+	line-height: 125%;
+	color: #000;
+}
+article#about .row .element hgroup h4 {
+	font-family: Georgia;
+	font-style: italic;
+	font-size: 1.4rem;
+	line-height: 143%;
+	color: #666;
+}
+article#about .row .element hgroup h5 {
+	font-family: MyriadPro, "Helvetica Neue", Helvetica, "Heiti TC", "微軟正黑體", "Microsoft Sans Serif";
+	font-size: 1.4rem;
+	line-height: 143%;
+	color: #999;
+	letter-spacing: 1px;
+}
+article#about .row .element table {
+	font-family: Absolut, "Helvetica Neue", Helvetica, "Heiti TC", "微軟正黑體", "Microsoft Sans Serif";
+	font-size: 1.8rem;
+	color: #000;
+	line-height: 20px;
+	background: #f9f9f9;
+	margin-top: 5px;
+}
+article#about .row .element table tr.tablerow {
+	background: #fff;
+}
+article#about .row .element table td {
+	padding: 10px 0;
+	height: 20px;
+}
+article#about .row .element table td.skill {
+	width: 165px;
+	padding-left: 10px;
+}
+article#about .row .element table td.star {
+	width: 25px;
+}
+article#about .row .element table td.full {
+	background: url(../images/star-full.png) no-repeat 0 10px;
+}
+article#about .row .element table td.half {
+	background: url(../images/star-half.png) no-repeat 0 10px;
+}
+article#about .row .element table td.empty{
+	background: url(../images/star-empty.png) no-repeat 0 10px;
+}
+article#about .border.bottom {
+	background: url(../images/border-white-bottom.png) 50% 0;
+}
+/*---about end---*/
+
+/*---service---*/
+article#service .content {
+	padding-top: 10px;
+	padding-bottom: 100px;
+}
+article#service h1 {
+	border-color: #eee;
+	color: #000;
+}
+article#service #provide:after {
+	content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+article#service #provide .element {
+	float: left;
+	width: 298px;
+	margin: 0 25px 25px 0;
+	border: 1px solid #e3e3e3;
+	background: #fff;
+}
+article#service #provide .element:hover {
+	border-color: #ccc;
+	background: #f9f9f9;
+}
+article#service #provide .element.triple {
+	margin-right: 0;
+}
+article#service #provide .element img {
+	width: 160px;
+	height: 155px;
+	padding: 0 69px;
+}
+article#service #provide .element p {
+	text-align: center;
+	font-size: 2.4rem;
+	font-family: Absolut, "Helvetica Neue", Helvetica, "Heiti TC", "微軟正黑體", "Microsoft Sans Serif";
+	margin-bottom: 20px;
+	line-height: 100%;
+	color: #000;
+}
+article#service h2 {
+	text-align: center;
+	background: url(../images/line.jpg) 0 50% repeat-x;
+	letter-spacing: 2px;
+	font-size: 3.6rem;
+	font-family: StMarieWebThin, "Helvetica Neue", Helvetica, "Heiti TC", "微軟正黑體", "Microsoft Sans Serif";
+	line-height: 168%;
+	margin-top: 25px;
+}
+article#service h2 span {
+	background: #fff;
+	padding: 0 15px;
+}
+article#service #process {
+	margin-top: 25px;
+}
+article#service #process:after {
+	content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+article#service #process .element {
+	float: left;
+	width: 148px;
+	height: 148px;
+	margin-right: 10px; 
+	border: 1px dashed #ccc;
+	background: #fff;
+	-moz-border-radius: 100%;
+	-webkit-border-radius: 100%;
+	border-radius: 100%;
+	text-align: center;
+	font-family: Absolut, "Helvetica Neue", Helvetica, "Heiti TC", "微軟正黑體", "Microsoft Sans Serif";
+}
+article#service #process .element:hover {
+	border-color: #aaa;
+	background: #f9f9f9;
+}
+article#service #process .element.last-child {
+	margin-right: 0; 
+}
+article#service #process .element h3 {
+	font-size: 7.2rem;
+	margin-top: 35px;
+	line-height: 100%;
+}
+article#service #process .element p {
+	font-size: 1.4rem;
+	line-height: 100%;
+}
+/*---service end---*/
+
+/*---portfolio---*/
+article#portfolio {
+	min-width: 1000px;
+	background: url(../images/portfilio-bg.jpg) repeat 50% 0;
+}
+article#portfolio .border.top {
+	background: url(../images/border-white-top.png) 50% 0;
+}
+article#portfolio .content {
+	padding-top: 10px;
+	padding-bottom: 50px;
+}
+article#portfolio h1 {
+	border-color: #ddd;
+	color: #000;
+}
+article#service section:after {
+	content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+article#portfolio .element {
+	float: left;
+	width: 450px;
+	margin: 0 50px 50px 0;
+}
+article#portfolio .element.double {
+	margin-right: 0;
+}
+article#portfolio .element h2 {
+	font-family: Absolut, "Helvetica Neue", Helvetica, "Heiti TC", "微軟正黑體", "Microsoft Sans Serif";
+	font-size: 3rem;
+	line-height: 125%;
+}
+article#portfolio .element h2:after {
+	content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+article#portfolio .element h2 span {
+	font-size: 2rem;
+	color: #777;
+	line-height: 100%;
+}
+article#portfolio .element h2 a {
+	float: right;
+	text-decoration: none;
+	font-size: 2rem;
+	color: #999;
+	font-family: MyriadPro, "Helvetica Neue", Helvetica, "Heiti TC", "微軟正黑體", "Microsoft Sans Serif";
+}
+article#portfolio .element h2 a:hover {
+	color: #666;
+}
+article#portfolio .element .box {
+	width: 450px;
+	height: 300px;
+	overflow: hidden;
+	position: relative;
+	background: #000;
+	-moz-box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.25);
+	-webkit-box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.25);
+	box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.25);
+	behavior: url(ie-css3.htc);
+}
+article#portfolio .element .box:hover {
+	-moz-box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.5);
+	box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.5);
+	behavior: url(ie-css3.htc);
+}
+article#portfolio .element .box img {
+	width: 450px;
+	height: 300px;
+	position: absolute;
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+ */
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(85%); /* Chrome 19+ & Safari 6+ */
+    -webkit-transition: all .6s ease; /* Fade to color for Chrome and Safari */
+    -webkit-backface-visibility: hidden; /* Fix for transition flickering */
+}
+
+article#portfolio .element .box img:hover {
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
+    -webkit-filter: grayscale(0%);
+}
+article#portfolio .element .box p{
+	width: 435px;
+	position: absolute;
+	z-index: 1;
+	font-size: 1.2rem;
+	line-height: 20px;
+	padding: 15px 0 15px 15px;
+	color: #fff;
+	font-family: MyriadPro, "Helvetica Neue", Helvetica, "Heiti TC", "微軟正黑體", "Microsoft Sans Serif";
+	background: rgba(0,0,0,0.5);
+	bottom: -50px;
+	letter-spacing: 1px;
+	
+	transition-property: bottom;
+	transition-duration: 0.3s;
+	transition-timing-function: ease;
+	transition-delay: 0.3s;
+	/* Firefox 4 */
+	-moz-transition-property: bottom; 
+	-moz-transition-duration: 0.3s;
+	-moz-transition-timing-function: ease;
+	-moz-transition-delay: 0.3s;
+	/* Safari and Chrome */
+	-webkit-transition-property: bottom; 
+	-webkit-transition-duration: 0.3s;
+	-webkit-transition-timing-function: ease;
+	-webkit-transition-delay: 0.3s;
+	/* Opera */
+	-o-transition-property: bottom;
+	-o-transition-duration: 0.3s;
+	-o-transition-timing-function: ease;
+	-o-transition-delay: 0.3s;
+}
+article#portfolio .element .box:hover p {
+	bottom: 0px;
+	
+	transition-property: bottom;
+	transition-duration: 0.5s;
+	transition-timing-function: linear;
+	transition-delay: 0s;
+	/* Firefox 4 */
+	-moz-transition-property: bottom; 
+	-moz-transition-duration: 0.5s;
+	-moz-transition-timing-function: linear;
+	-moz-ttransition-delay: 0s;
+	/* Safari and Chrome */
+	-webkit-transition-property: bottom; 
+	-webkit-transition-duration: 0.5s;
+	-webkit-transition-timing-function: linear;
+	-webkit-transition-delay: 0s;
+	/* Opera */
+	-o-transition-property: bottom;
+	-o-transition-duration: 0.5s;
+	-o-transition-timing-function: linear;
+	-o-transition-delay: 0s;
+}
+article#portfolio .border.bottom {
+	background: url(../images/border-portfolio-bottom.png) 50% 0;
+}
+/*---portfolio end---*/
+
+/*---contact---*/
+article#contact {
+	min-width: 1000px;
+	background: url(../images/contact-bg.jpg) repeat 50% 0;
+}
+article#contact .content {
+	padding-top: 10px;
+	padding-bottom: 60px;
+}
+article#contact h1 {
+	border-color: #444;
+	color: #fff;
+}
+article#contact .row {
+	margin-bottom: 20px;
+	color: #fff;
+}
+article#contact .row:after {
+	content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+article#contact .row h2 {
+	font-family: StMarieWebThin, "Helvetica Neue", Helvetica, "Heiti TC", "微軟正黑體", "Microsoft Sans Serif";
+	border-bottom: 1px solid #444;
+	font-size: 2.4rem;
+	line-height: 125%;
+	margin-bottom: 15px;
+	padding-bottom: 3px;
+}
+article#contact .row img#logo {
+	width: 202px;
+	height: 202px;
+	float: left;
+}
+article#contact .row #touch {
+	float: right;
+	width: 475px;
+}
+article#contact .row #touch p {
+	padding-left: 40px;
+	line-height: 28px;
+	font-size: 1.6rem;
+	font-family: MyriadPro, "Helvetica Neue", Helvetica, "Heiti TC", "微軟正黑體", "Microsoft Sans Serif";
+	margin-bottom: 15px;
+}
+article#contact .row #touch p#mail {
+	background: url(../images/icon-mail.png) no-repeat;
+}
+article#contact .row #touch p#skype {
+	background: url(../images/icon-skype.png) no-repeat;
+}
+article#contact .row #info {
+	float: left;
+}
+article#contact .row #info p {
+	font-size: 1.6rem;
+	line-height: 138%;
+	font-family: MyriadPro, "Helvetica Neue", Helvetica, "Heiti TC", "微軟正黑體", "Microsoft Sans Serif";
+}
+article#contact .row #info h3 {
+	font-size: 3.6rem;
+	line-height: 100%;
+	margin-top: 5px;
+	font-family: MyriadPro, "Helvetica Neue", Helvetica, "Heiti TC", "微軟正黑體", "Microsoft Sans Serif";
+	letter-spacing: 1px;
+}
+article#contact .row #social {
+	float: right;
+	width: 475px;
+}
+article#contact .row #social #socialgroup {
+	padding-top: 5px;
+}
+article#contact .row #social img {
+	margin-right: 10px;
+	width: 30px;
+	height: 30px;
+}
+
+
+
+#map {
+	width: 100%;
+	border-top: 10px solid #e1e5ce;
+	border-bottom: 10px solid #e1e5ce;
+	padding: 10px 0;
+}
+#map:hover {
+	border-top-color: #fff;
+	border-bottom-color: #fff;
+}
+#googlemap {
+	width: 100%;
+	height: 320px;
+}
+article#contact nav {
+	margin-top: 140px;
+	padding-bottom: 80px;
+}
+article#contact nav:after {
+	content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+article#contact nav a {
+	float: left;
+	color: #999;
+	text-decoration: none;
+	font-size: 2.1rem;
+	font-family: StMarieWebThin, "Helvetica Neue", Helvetica, "Heiti TC", "微軟正黑體", "Microsoft Sans Serif";
+	background: #333;
+	border: 1px solid #333;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	margin-right: 20px;
+	line-height: 24px;
+	padding: 6px 10px;
+}
+article#contact nav a:hover {
+	color: #fff;
+	border-color: #444;
+	background: #222;
+}
+article#contact nav p {
+	float: right;
+	line-height: 38px;
+	font-size: 1.3rem;
+	color: #999;
+	font-family: MyriadPro;
+}
