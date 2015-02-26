@@ -493,7 +493,7 @@ article#portfolio .element {
 	width: 450px;
 	margin: 0 50px 50px 0;
 }
-article#portfolio .element.double {
+article#portfolio .element:nth-child(even) {
 	margin-right: 0;
 }
 article#portfolio .element h2 {
@@ -516,9 +516,12 @@ article#portfolio .element h2 span {
 article#portfolio .element h2 a {
 	float: right;
 	text-decoration: none;
-	font-size: 2rem;
+	font-size: 1.6rem;
 	color: #999;
 	font-family: MyriadPro, "Helvetica Neue", Helvetica, "Heiti TC", "微軟正黑體", "Microsoft Sans Serif";
+	line-height: 170%;
+	border: 1px solid #999;
+	padding: 0 10px;
 }
 article#portfolio .element h2 a:hover {
 	color: #666;
